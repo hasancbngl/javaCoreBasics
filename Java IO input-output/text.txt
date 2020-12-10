@@ -1,0 +1,3 @@
+Let's read data from that file
+it's test so lets have some fun
+yo mate I did it.
