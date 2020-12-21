@@ -9,9 +9,6 @@ public class Main {
 
         FindFrequency.findLetterFrequency();
 
-
-
-
            /*
         StringBuffer stringBuffer = new StringBuffer("learning Strings");
         stringBuffer.append(" today"); // the string changed
