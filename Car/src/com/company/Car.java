@@ -14,12 +14,17 @@ public class Car{
    private double currentFuel = 10;
    private double mpg = 22.8;
    private int peopleInTheCar = 2;
+   private int maxNumberOfPeopleInTheCar = 6;
+
 
    //f(x,y,z) = y - x-2 / z;
    //f(x) = x+1;
    //x=5
    //f(5) = 5+1
 
+    public Car() {
+
+    }
 
    public Car(int customMaxSpeed, double customWeight, boolean customIsTheCarOn) {
        this.maxSpeed = customMaxSpeed;
@@ -45,11 +50,32 @@ public class Car{
     }
 
     public void getInTheCar() {
-       peopleInTheCar++;
+        if(peopleInTheCar<maxNumberOfPeopleInTheCar) {
+        peopleInTheCar++;
+            System.out.println("someone got in");
+        } else {
+            System.out.println("The car is full " + peopleInTheCar + "=" + maxNumberOfPeopleInTheCar);
+        }
+
     }
 
     public void getOutOfTheCar() {
-       peopleInTheCar--;
+        if(peopleInTheCar>0) {
+            peopleInTheCar--;
+            System.out.println("people in the car: " + peopleInTheCar);
+        }
+        else {
+            System.out.println("No one is in the car: " + peopleInTheCar);
+        }
+    }
+
+    public void turnTheCarOn() {
+        if(!isTheCarOn) {
+            isTheCarOn = true;
+        }
+        else {
+            System.out.println("The car is already on!");
+        }
     }
 
     public double milesTillGasOut() {

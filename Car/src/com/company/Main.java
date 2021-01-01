@@ -15,6 +15,14 @@ public class Main {
 
         System.out.println("Tom's car v2");
         tomsCar.printDetails();
+        tomsCar.getInTheCar();
+        tomsCar.getInTheCar();
+        tomsCar.getInTheCar();
+
+        tomsCar.getOutOfTheCar();
+        tomsCar.getInTheCar();
+        tomsCar.turnTheCarOn();
+
 
     }
 }

@@ -1,14 +1,26 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wnter an amount:");
 
+        int amount = scanner.nextInt();
+
+        Bank bank = new Bank(amount,"john");
+        bank.interestPaid();
+         amount = scanner.nextInt();
+        GBank gBank = new GBank(amount , "mike");
+        gBank.interestPaid();
+
+      /*  Vehicle v = new Vehicle();
+        v.speed();
         Child child = new Child();
         child.displayText();
-
-/*
 
         Student student = new Student();
         student.addMArks();
@@ -24,9 +36,6 @@ public class Main {
         geoStudent.displayMathMarks();
         geoStudent.displayGeoStudentMarks();
 
-
-
-
         System.out.println("********************************");
         BioStudent bioStudent = new BioStudent();
         bioStudent.addMArks();
@@ -41,24 +50,14 @@ public class Main {
           e.displayPoints();
           e.displayMathMarks();
 
-
-
-
-
-
-
-
         Child child = new Child();
 
         child.displayString();
         System.out.println(child.year);
         child.addRandom();
-
         child.displayRandom();
 
-
         Student.displayAge();
-
 
         Area area = new Area();
         area.height=7;
@@ -72,8 +71,6 @@ public class Main {
         System.out.println("---------------");
 
         calculate.calculate(place);
-
-
 
         Student student = new Student(2,5,9,8);
         student.id=95;
