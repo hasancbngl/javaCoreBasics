@@ -16,12 +16,6 @@ public class Car{
    private int peopleInTheCar = 2;
    private int maxNumberOfPeopleInTheCar = 6;
 
-
-   //f(x,y,z) = y - x-2 / z;
-   //f(x) = x+1;
-   //x=5
-   //f(5) = 5+1
-
     public Car() {
 
     }
@@ -32,7 +26,59 @@ public class Car{
        this.isTheCarOn = customIsTheCarOn;
    }
 
+   public int getMaxSpeed() {
+        return this.maxSpeed;
+   }
+   public void  setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+   }
 
+   public int getMinSpeed(){
+        return  this.minSpeed;
+   }
+   public void  setMinSpeed(int minSpeed) {
+        this.minSpeed = minSpeed;
+   }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public boolean isTheCarOn() {
+        return isTheCarOn;
+    }
+
+    public void setTheCarOn(boolean theCarOn) {
+        isTheCarOn = theCarOn;
+    }
+
+    public char getCondition() {
+        return condition;
+    }
+
+    public void setCondition(char condition) {
+        this.condition = condition;
+    }
+
+    public String getNameOfTheCar() {
+        return nameOfTheCar;
+    }
+
+    public void setNameOfTheCar(String nameOfTheCar) {
+        this.nameOfTheCar = nameOfTheCar;
+    }
+
+    public double getMaxFuel() {
+        return maxFuel;
+    }
+
+    public void setMaxFuel(double maxFuel) {
+        this.maxFuel = maxFuel;
+    }
 
     public void printDetails() {
         System.out.println("max speed:" + maxSpeed);
@@ -44,10 +90,10 @@ public class Car{
         System.out.println("number of people:" + peopleInTheCar);
     }
 
-    public void upgradeMinSpeed() {
-        minSpeed = maxSpeed;
-        maxSpeed = 200;
+    public void upgradeMaxSpeed() {
+      setMaxSpeed(getMaxSpeed() +10);
     }
+    
 
     public void getInTheCar() {
         if(peopleInTheCar<maxNumberOfPeopleInTheCar) {
