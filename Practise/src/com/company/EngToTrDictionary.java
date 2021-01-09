@@ -3,12 +3,10 @@ package com.company;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class EngToTrDictionary {
 
-    public static void main(String[] args) {
-
+    public static void engToTrDictionaryExample() {
         Map<String,String> engToTr = new HashMap<String, String>();
-
         engToTr.put("tree", "ağaç");
         engToTr.put("big", "buyuk");
         engToTr.put("calm", "sakin");
@@ -21,4 +19,5 @@ public class Main {
         System.out.println("----values---");
         System.out.println(engToTr.values());
     }
+
 }
