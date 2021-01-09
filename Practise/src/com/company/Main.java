@@ -7,10 +7,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(Recursion.Factorial(10));
+        Collections.arrayListExample();
+
+            /*
+        if (Collections.arrayListExample().contains("Hasan")) {
+            System.out.println("Yes it contains");
+        } else {
+            Collections.friendsNames.add("hasan");
+            System.out.println("now it contains");
+        }
 
 
-     //   EngToTrDictionary.engToTrDictionaryExample();
+        System.out.println(Recursion.factorial(10));
+        System.out.println(Recursion.exponentiation(5,5));
+        EngToTrDictionary.engToTrDictionaryExample();*/
 
     }
 }

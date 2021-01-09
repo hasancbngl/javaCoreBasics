@@ -15,25 +15,32 @@ public class Recursion {
     f(f(f(20))) ===> f(f(25)) => f(30) =>35
     */
 
-    public static int Summation(int n) {
+    public static int summation(int n) {
         //base case
         if(n<=0) {
             return 0;
         } else {
             //recursive case
-           return n + Summation(n-1);
+           return n + summation(n-1);
         }
     }
 
-
-    public static int Factorial(int n) {
+    public static int factorial(int n) {
         if(n<=1) {
             return 1;
         }
         else {
-            return n * Factorial(n-1);
+            return n * factorial(n-1);
         }
-
+    }
+    //8^4 =8 * 8 * 8 * 8
+    public static long exponentiation(int n, int p) {
+        if(p<=0) {
+            return 1;
+        }
+        else{
+                return n * exponentiation(n,p-1);
+        }
     }
 
 
