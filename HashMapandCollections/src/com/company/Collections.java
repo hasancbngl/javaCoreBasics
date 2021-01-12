@@ -5,16 +5,51 @@ import java.util.*;
 public class Collections {
     public static ArrayList<String> friendsNames;
 
-    public static void hashSetI() {
-        HashSet<Integer> numbers = new HashSet<>();
+    public static void treeSetE() {
+        //treeset implements SortedSet interface
+        TreeSet<Phone> phoneTreeSet = new TreeSet<Phone>();
 
+        Phone redMI = new Phone(1800,"RedMi 9", 2019, "android");
+        Phone samsung = new Phone(1000,"S10", 2018, "android");
+        Phone iphone = new Phone(4000,"Iphone 9", 2017, "Ios");
+        Phone c5 = new Phone(8000,"C5", 2020, "C");
+
+        phoneTreeSet.add(redMI);
+        phoneTreeSet.add(samsung);
+        phoneTreeSet.add(iphone);
+        phoneTreeSet.add(c5);
+
+        for(Phone phone:phoneTreeSet) {
+            System.out.println("price: " + phone.getPrice() + " brand: " + phone.getBrand() +
+                    " year: " + phone.getYear() + " OSType: " + phone.getoSType());
+        }
+
+
+    }
+
+    public static void hashSetI() {
+        //HashSet is an unordered & unsorted collection, whereas the
+        // LinkedHashSet is ordered and sorted collection of HashSet.
+
+        LinkedHashSet<Integer> myNumbers = new LinkedHashSet();
+
+        myNumbers.add(5);
+        myNumbers.add(5);
+        myNumbers.add(1);
+        myNumbers.add(47);
+        myNumbers.add(4);
+
+        System.out.println( "LinkedHashset: " + myNumbers.toString());
+        System.out.println("---");
+
+        HashSet<Integer> numbers = new HashSet<>();
         numbers.add(5);
         numbers.add(5);
         numbers.add(1);
         numbers.add(47);
         numbers.add(4);
 
-        System.out.println(numbers.toString());
+        System.out.println( "hashset: " + numbers.toString());
 
         for (int i = 1; i <= 10; i++) {
             if (numbers.contains(i)) {
@@ -22,10 +57,11 @@ public class Collections {
             } else {
                 System.out.println(i + " not in the set.");
             }
-
         }
-    }
 
+
+
+    }
 
     public static void linkedListE() {
         //or List<Integer> => List is an interface
@@ -64,7 +100,6 @@ public class Collections {
         System.out.println("");
     }
 
-
     public static void example2() {
         Phone redMI = new Phone(1000,"RedMi 9", 2019, "android");
         Phone samsung = new Phone(1500,"S10", 2018, "android");
@@ -81,7 +116,6 @@ public class Collections {
               + " year: " + phones.get(i).getYear() + " OStype: " + phones.get(i).getoSType());
         }
     }
-
 
     public static void arrayListExample() {
         friendsNames = new ArrayList<String>();

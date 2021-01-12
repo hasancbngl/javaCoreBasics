@@ -1,6 +1,6 @@
 package com.company;
 
-public class Phone {
+public class Phone implements Comparable<Phone>{
        private int price;
        private   String brand;
        private   int year;
@@ -44,4 +44,11 @@ public class Phone {
             this.oSType = oSType;
         }
 
+    @Override
+    public int compareTo(Phone phone) {
+            if(price> phone.price) return 1;
+            else if(price<phone.price)  return -1;
+
+            else return 0;
+    }
 }
