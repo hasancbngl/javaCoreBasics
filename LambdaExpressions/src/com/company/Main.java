@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 
@@ -7,32 +8,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Message<String> message;
+        ArrayList<Integer> numbers =new ArrayList<>();
+        numbers.add(20);
+        numbers.add(450);
 
-        message = (a)->{
-            return a;
-        };
+        System.out.println(Test.multiplication(n-> {return n*3;}, 8));
 
-        System.out.println(message.displayMessage("Hello Typeless lambda's interface"));
+        //System.out.println(Test.display((n)-> {return  n; }, "Thats it"));
 
-        Message<Integer> integerMessage;
+        LambdasNotesE.lambda();
 
-        integerMessage = (n) ->{
-            n = n*2;
-            return n;
-        };
-
-        System.out.println(integerMessage.displayMessage(544545));
-
-
-
-        System.out.println("----------");
-       LambdasNotesE.lambda();
-
-        NumbersI number;
-        number = (a,b)-> 25*a + b;
-
-        System.out.println(number.value(8,5));
 
     }
 }
